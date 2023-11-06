@@ -15,11 +15,12 @@ export default function Header(props) {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             Todos List
                         </ul>
-                       { props.searchBar? <form className="d-flex" role="search">
+                        { props.searchBar? <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>:""
-                       }
+                        </form> : ""}
+
+                        
                     </div>
                 </div>
             </nav>
@@ -28,10 +29,10 @@ export default function Header(props) {
 }
 Header.defaultProps = {
     title: "Your Title Here",
-    searchBar:  true
+    searchBar: false
 }
 Header.propTypes = {
-    title: PropTypes.string ,
+    title: PropTypes.string,
     searchBar: PropTypes.bool
-    
+
 }
